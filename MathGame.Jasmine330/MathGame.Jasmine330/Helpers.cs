@@ -42,17 +42,12 @@ namespace MathGame.Jasmine330
 
         internal static void PrintGames()
         {
-            var gamesToPrint = games.Where(x => x.Date > new DateTime(2022, 08, 09)).OrderByDescending(x => x.Score);
             Console.Clear();
             Console.WriteLine("Game History");
             Console.WriteLine("_______________________________________\n");
 
             foreach (var game in games)
             {
-                if(game.Type == GameType.RandomGame)
-                {
-
-                }
                 Console.WriteLine($"{game.Date} - {game.Type}: \t{game.Score}pts \t\t Time Taken: {game.Time.ToString("mm\\:ss\\.fff")}");
             }
             Console.WriteLine("_______________________________________\n");
